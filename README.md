@@ -37,7 +37,7 @@ Aqua Cards 是一个基于 [Mushroom Cards](https://github.com/piitaya/lovelace-
    - 添加 URL: `https://github.com/YuzhaLab/aqua-cards`
    - 类别选择: "Lovelace"
 3. 点击 "Download" 安装 -->
-<!-- [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=piitaya&repository=lovelace-mushroom) -->
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=YuzhaLab&repository=https%3A%2F%2Fgithub.com%2FYuzhaLab%2Flovelace-aqua)
 
 ### 手动安装
 
