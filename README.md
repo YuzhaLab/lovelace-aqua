@@ -29,23 +29,24 @@ Aqua Cards 是一个基于 [Mushroom Cards](https://github.com/piitaya/lovelace-
 ### HACS 安装
 
 1. 确保已安装 HACS
-2. 在 HACS 中添加自定义存储库:
+2. 点击下方按钮
+<!-- 2. 在 HACS 中添加自定义存储库:
    - 点击 HACS 侧边栏中的 "Frontend"
    - 点击右上角的菜单按钮
    - 选择 "Custom repositories"
    - 添加 URL: `https://github.com/YuzhaLab/aqua-cards`
    - 类别选择: "Lovelace"
-3. 点击 "Download" 安装
+3. 点击 "Download" 安装 -->
 <!-- [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=piitaya&repository=lovelace-mushroom) -->
 
 ### 手动安装
 
 1. 下载最新版本的 `aqua.js`
 2. 将文件复制到 `config/www/` 目录
-3. 在 Dashboard 资源中添加引用:
+3. 在 Dashboard 资源中添加引用或者使用下面这个将一下代码添加到lovelace部分
     ```yaml
     resources:
-        - url: /local/aqua-cards.js
+        - url: /local/aqua.js
           type: module
     ```
 
