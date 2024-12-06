@@ -1,7 +1,75 @@
 # Aqua Cards
 
 <div align="right">
-    <a href="#chinese">中文</a> | <a href="#english">English</a>
+    <a href="#english">English</a> | <a href="#chinese">中文</a>
+</div>
+
+<div id="english">
+
+# Aqua Cards (English)
+
+Aqua Cards is a collection of Home Assistant aquarium control cards based on [Mushroom Cards](https://github.com/piitaya/lovelace-mushroom).
+
+## About
+
+This is a customized card collection for aquarium control systems. Main modifications include:
+- Converting fan card to pump control card
+- Adding flow monitoring functionality
+- Optimizing aquarium-related UI display
+
+## Prerequisites
+
+As this project is an extension of Mushroom Cards, please ensure:
+
+1. [HACS](https://hacs.xyz) is installed
+2. [Mushroom Cards](https://github.com/piitaya/lovelace-mushroom) is installed via HACS
+
+## Installation
+
+### HACS Installation
+
+1. Make sure HACS is installed
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?repository=https%3A%2F%2Fgithub.com%2FYuzhaLab%2Flovelace-aqua&owner=YuzhaLab)
+
+### Manual Installation
+
+1. Download the latest version of `aqua.js`
+2. Copy the file to `config/www/` directory
+3. Add reference in Dashboard resources:
+    ```yaml
+    resources:
+        - url: /local/aqua-cards.js
+          type: module
+    ```
+
+## Usage
+
+### Pump Control Card
+
+1. Edit dashboard
+2. Add card
+3. Search for "Aqua Pump Card"
+4. Configure entity and options
+
+### Configuration Example
+
+```yaml
+type: custom:aqua-pump-card
+entity: fan.aquarium_pump
+show_percentage_control: true
+show_oscillate_control: false
+```
+
+## Copyright and License
+
+- Original code copyright 2022-2024 piitaya
+- Modified code copyright 2024 YuzhaLab
+- Licensed under Apache License 2.0
+
+## Contributing
+
+Issues and Pull Requests are welcome!
+
 </div>
 
 <div id="chinese">
@@ -80,70 +148,4 @@ show_oscillate_control: false
 
 </div>
 
-<div id="english">
 
-# Aqua Cards (English)
-
-Aqua Cards is a collection of Home Assistant aquarium control cards based on [Mushroom Cards](https://github.com/piitaya/lovelace-mushroom).
-
-## About
-
-This is a customized card collection for aquarium control systems. Main modifications include:
-- Converting fan card to pump control card
-- Adding flow monitoring functionality
-- Optimizing aquarium-related UI display
-
-## Prerequisites
-
-As this project is an extension of Mushroom Cards, please ensure:
-
-1. [HACS](https://hacs.xyz) is installed
-2. [Mushroom Cards](https://github.com/piitaya/lovelace-mushroom) is installed via HACS
-
-## Installation
-
-### HACS Installation
-
-1. Make sure HACS is installed
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?repository=https%3A%2F%2Fgithub.com%2FYuzhaLab%2Flovelace-aqua&owner=YuzhaLab)
-
-### Manual Installation
-
-1. Download the latest version of `aqua.js`
-2. Copy the file to `config/www/` directory
-3. Add reference in Dashboard resources:
-    ```yaml
-    resources:
-        - url: /local/aqua-cards.js
-          type: module
-    ```
-
-## Usage
-
-### Pump Control Card
-
-1. Edit dashboard
-2. Add card
-3. Search for "Aqua Pump Card"
-4. Configure entity and options
-
-### Configuration Example
-
-```yaml
-type: custom:aqua-pump-card
-entity: fan.aquarium_pump
-show_percentage_control: true
-show_oscillate_control: false
-```
-
-## Copyright and License
-
-- Original code copyright 2022-2024 piitaya
-- Modified code copyright 2024 YuzhaLab
-- Licensed under Apache License 2.0
-
-## Contributing
-
-Issues and Pull Requests are welcome!
-
-</div>
