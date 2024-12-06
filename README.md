@@ -1,4 +1,3 @@
-# Aqua Cards
 
 <div align="right">
     <a href="#english">English</a> | <a href="#chinese">中文</a>
