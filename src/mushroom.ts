@@ -27,7 +27,7 @@ import { version } from "../package.json";
 
 
 import "./cards/pump-card/pump-card";
-
+import "./cards/liquid-level-card/liquid-level-card";
 console.info(
   `%c🍄 Aqua 🍄 - ${version}`,
   "color: #ef5350; font-weight: 700;"
