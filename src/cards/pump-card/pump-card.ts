@@ -73,8 +73,7 @@ export class AquaFanCard
 
   protected get hasControls(): boolean {
     return (
-      Boolean(this._config?.show_percentage_control) ||
-      Boolean(this._config?.show_oscillate_control)
+      Boolean(this._config?.show_percentage_control)
     );
   }
 
@@ -148,8 +147,7 @@ export class AquaFanCard
 
     const displayControls =
       (!this._config.collapsible_controls || isActive(stateObj)) &&
-      (this._config.show_percentage_control ||
-        this._config.show_oscillate_control);
+      (this._config.show_percentage_control);
 
     return html`
       <ha-card
@@ -181,14 +179,6 @@ export class AquaFanCard
                           .entity=${stateObj}
                           @current-change=${this.onCurrentPercentageChange}
                         ></mushroom-fan-percentage-control>
-                      `
-            : nothing}
-                  ${this._config.show_oscillate_control
-            ? html`
-                        <mushroom-fan-oscillate-control
-                          .hass=${this.hass}
-                          .entity=${stateObj}
-                        ></mushroom-fan-oscillate-control>
                       `
             : nothing}
                 </div>

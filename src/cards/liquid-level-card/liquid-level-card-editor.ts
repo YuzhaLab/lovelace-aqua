@@ -9,6 +9,7 @@ import { HaFormSchema } from "../../utils/form/ha-form";
 import { loadHaComponents } from "../../utils/loader";
 import { LiquidLevelCardConfig, liquidLevelCardConfigStruct } from "./liquid-level-card-config";
 import { LIQUID_LEVEL_CARD_EDITOR_NAME, LIQUID_LEVEL_ENTITY_DOMAINS } from "./const";
+import { computeRgbColor } from "../../utils/colors";
 
 const SCHEMA: HaFormSchema[] = [
   { 
@@ -29,6 +30,14 @@ const SCHEMA: HaFormSchema[] = [
     name: "icon",
     selector: {
       icon: {}
+    }
+  },
+  {
+    name: "color",
+    selector: {
+      color_rgb: {
+        defaultValue: [255, 255, 255]  // 设置默认值为白色
+      }
     }
   }
 ];
@@ -68,11 +77,45 @@ export class LiquidLevelCardEditor
       return nothing;
     }
 
+    // 获取主题色的RGB值
+    const defaultColor = computeRgbColor('var(--primary-color)').split(',').map(Number);
+
+    const schema = [
+      {
+        name: "entity",
+        selector: {
+          entity: {
+            domain: LIQUID_LEVEL_ENTITY_DOMAINS
+          }
+        }
+      },
+      {
+        name: "name",
+        selector: {
+          text: {}
+        }
+      },
+      {
+        name: "icon",
+        selector: {
+          icon: {}
+        }
+      },
+      {
+        name: "color",
+        selector: {
+          color_rgb: {
+            defaultValue: defaultColor
+          }
+        }
+      }
+    ];
+
     return html`
       <ha-form
         .hass=${this.hass}
         .data=${this._config}
-        .schema=${SCHEMA}
+        .schema=${schema}
         .computeLabel=${this._computeLabel}
         @value-changed=${this._valueChanged}
       ></ha-form>

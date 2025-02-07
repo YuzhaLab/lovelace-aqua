@@ -15,7 +15,6 @@ import { FanCardConfig, fanCardConfigStruct } from "./pump-card-config";
 const FAN_LABELS = [
   "icon_animation",
   "show_percentage_control",
-  "show_oscillate_control",
 ];
 
 const SCHEMA: HaFormSchema[] = [
@@ -42,7 +41,6 @@ const SCHEMA: HaFormSchema[] = [
     name: "",
     schema: [
       { name: "show_percentage_control", selector: { boolean: {} } },
-      { name: "show_oscillate_control", selector: { boolean: {} } },
       { name: "collapsible_controls", selector: { boolean: {} } },
     ],
   },

@@ -20,7 +20,6 @@ export type FanCardConfig = LovelaceCardConfig &
   ActionsSharedConfig & {
     icon_animation?: boolean;
     show_percentage_control?: boolean;
-    show_oscillate_control?: boolean;
     collapsible_controls?: boolean;
     entity_second?: string,
   };
@@ -35,7 +34,6 @@ export const fanCardConfigStruct = assign(
   object({
     icon_animation: optional(boolean()),
     show_percentage_control: optional(boolean()),
-    show_oscillate_control: optional(boolean()),
     collapsible_controls: optional(boolean()),
     entity_second: optional(string()),
   })
