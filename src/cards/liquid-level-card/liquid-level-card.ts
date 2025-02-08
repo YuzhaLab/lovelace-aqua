@@ -129,8 +129,9 @@ export class LiquidLevelCard
         .level-indicators {
           flex: 0 0 22px;
           display: flex;
-          flex-direction: column;
+          flex-direction: column-reverse;
           gap: 4px;
+          justify-content: flex-end;
         }
         .info {
           flex: 1;
