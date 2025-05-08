@@ -1,4 +1,3 @@
-
 <div align="right">
     <a href="#english">English</a> | <a href="#chinese">中文</a>
 </div>
@@ -13,8 +12,16 @@ Aqua Cards is a collection of Home Assistant aquarium control cards based on [Mu
 
 This is a customized card collection for aquarium control systems. Main modifications include:
 - Converting fan card to pump control card
+- Adding water level monitoring component
 - Adding flow monitoring functionality
 - Optimizing aquarium-related UI display
+
+More aquarium-specific cards will be added in future updates.
+
+## Preview
+
+![Pump Card Light Mode](docs/images/fan-light.png)
+![Pump Card Dark Mode](docs/images/fan-dark.png)
 
 ## Prerequisites
 
@@ -81,8 +88,16 @@ Aqua Cards 是一个基于 [Mushroom Cards](https://github.com/piitaya/lovelace-
 
 这是一个专门为水族箱控制系统定制的卡片集合，主要修改包括:
 - 将风扇卡片改造为水泵控制卡片
+- 添加水位监测组件
 - 添加流量监控功能
 - 优化水族相关的UI展示
+
+未来会支持更多水族相关的卡片组件。
+
+## 预览
+
+![水泵卡片](docs/images/image.png)
+![液位卡片](docs/images/image1.png)
 
 ## 前置要求
 
