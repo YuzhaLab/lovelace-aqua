@@ -20,3 +20,5 @@ jobs:
                   draft: true
                   generate_release_notes: true
                   files: dist/*.js
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
