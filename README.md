@@ -20,8 +20,8 @@ More aquarium-specific cards will be added in future updates.
 
 ## Preview
 
-![Pump Card Light Mode](docs/images/fan-light.png)
-![Pump Card Dark Mode](docs/images/fan-dark.png)
+![水泵卡片](docs/images/image.png)
+![液位卡片](docs/images/image1.png)
 
 ## Prerequisites
 
